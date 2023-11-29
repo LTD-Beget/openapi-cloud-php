@@ -19,5 +19,6 @@ Name | Type | Description | Notes
 **monitorable_resources** | **string[]** |  | [optional]
 **unblocking** | **bool** |  | [optional]
 **migrating** | **bool** |  | [optional]
+**region** | **string** |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)
