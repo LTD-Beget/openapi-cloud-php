@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **display_name** | **string** |  | [optional]
 **description** | **string** |  | [optional]
 **mysql_params** | [**\OpenAPI\Client\Model\MysqlCreateParams**](MysqlCreateParams.md) |  | [optional]
+**postgresql_params** | [**\OpenAPI\Client\Model\PostgresqlPgCreateParams**](PostgresqlPgCreateParams.md) |  | [optional]
 **extra** | **string** |  | [optional]
 **region** | **string** |  | [optional]
 

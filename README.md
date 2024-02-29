@@ -100,6 +100,25 @@ Class | Method | HTTP request | Description
 *MysqlStatisticServiceApi* | [**mysqlStatisticServiceGetLoadAverage**](docs/Api/MysqlStatisticServiceApi.md#mysqlstatisticservicegetloadaverage) | **GET** /v1/cloud/mysql/{service_id}/statistic/load-average | 
 *MysqlStatisticServiceApi* | [**mysqlStatisticServiceGetMemory**](docs/Api/MysqlStatisticServiceApi.md#mysqlstatisticservicegetmemory) | **GET** /v1/cloud/mysql/{service_id}/statistic/memory | 
 *MysqlStatisticServiceApi* | [**mysqlStatisticServiceGetNetwork**](docs/Api/MysqlStatisticServiceApi.md#mysqlstatisticservicegetnetwork) | **GET** /v1/cloud/mysql/{service_id}/statistic/network | 
+*PostgresqlServiceApi* | [**postgresqlServiceCreateDb**](docs/Api/PostgresqlServiceApi.md#postgresqlservicecreatedb) | **POST** /v1/cloud/postgresql/{service_id}/db | 
+*PostgresqlServiceApi* | [**postgresqlServiceCreateRole**](docs/Api/PostgresqlServiceApi.md#postgresqlservicecreaterole) | **POST** /v1/cloud/postgresql/{service_id}/role | 
+*PostgresqlServiceApi* | [**postgresqlServiceGetConfig**](docs/Api/PostgresqlServiceApi.md#postgresqlservicegetconfig) | **GET** /v1/cloud/postgresql/{service_id}/config | 
+*PostgresqlServiceApi* | [**postgresqlServiceGetDbList**](docs/Api/PostgresqlServiceApi.md#postgresqlservicegetdblist) | **GET** /v1/cloud/postgresql/{service_id}/db | 
+*PostgresqlServiceApi* | [**postgresqlServiceGetRemoteAccess**](docs/Api/PostgresqlServiceApi.md#postgresqlservicegetremoteaccess) | **GET** /v1/cloud/postgresql/{service_id}/remote-access | 
+*PostgresqlServiceApi* | [**postgresqlServiceGetRoleList**](docs/Api/PostgresqlServiceApi.md#postgresqlservicegetrolelist) | **GET** /v1/cloud/postgresql/{service_id}/role | 
+*PostgresqlServiceApi* | [**postgresqlServiceRemoveDb**](docs/Api/PostgresqlServiceApi.md#postgresqlserviceremovedb) | **DELETE** /v1/cloud/postgresql/{service_id}/db/{db_name} | 
+*PostgresqlServiceApi* | [**postgresqlServiceRemoveRole**](docs/Api/PostgresqlServiceApi.md#postgresqlserviceremoverole) | **DELETE** /v1/cloud/postgresql/{service_id}/role/{role_name} | 
+*PostgresqlServiceApi* | [**postgresqlServiceSetConfig**](docs/Api/PostgresqlServiceApi.md#postgresqlservicesetconfig) | **PUT** /v1/cloud/postgresql/{service_id}/config | 
+*PostgresqlServiceApi* | [**postgresqlServiceUpdateDb**](docs/Api/PostgresqlServiceApi.md#postgresqlserviceupdatedb) | **PATCH** /v1/cloud/postgresql/{service_id}/db/{db_name} | 
+*PostgresqlServiceApi* | [**postgresqlServiceUpdateRemoteAccess**](docs/Api/PostgresqlServiceApi.md#postgresqlserviceupdateremoteaccess) | **PUT** /v1/cloud/postgresql/{service_id}/remote-access | 
+*PostgresqlServiceApi* | [**postgresqlServiceUpdateRole**](docs/Api/PostgresqlServiceApi.md#postgresqlserviceupdaterole) | **PATCH** /v1/cloud/postgresql/{service_id}/role/{role_name} | 
+*PostgresqlStatisticServiceApi* | [**postgresqlStatisticServiceGetCpu**](docs/Api/PostgresqlStatisticServiceApi.md#postgresqlstatisticservicegetcpu) | **GET** /v1/cloud/postgresql/{service_id}/statistic/cpu | 
+*PostgresqlStatisticServiceApi* | [**postgresqlStatisticServiceGetCpuDetails**](docs/Api/PostgresqlStatisticServiceApi.md#postgresqlstatisticservicegetcpudetails) | **GET** /v1/cloud/postgresql/{service_id}/statistic/cpu-details | 
+*PostgresqlStatisticServiceApi* | [**postgresqlStatisticServiceGetDisk**](docs/Api/PostgresqlStatisticServiceApi.md#postgresqlstatisticservicegetdisk) | **GET** /v1/cloud/postgresql/{service_id}/statistic/disk | 
+*PostgresqlStatisticServiceApi* | [**postgresqlStatisticServiceGetDiskUsage**](docs/Api/PostgresqlStatisticServiceApi.md#postgresqlstatisticservicegetdiskusage) | **GET** /v1/cloud/postgresql/{service_id}/statistic/disk-usage | 
+*PostgresqlStatisticServiceApi* | [**postgresqlStatisticServiceGetLoadAverage**](docs/Api/PostgresqlStatisticServiceApi.md#postgresqlstatisticservicegetloadaverage) | **GET** /v1/cloud/postgresql/{service_id}/statistic/load-average | 
+*PostgresqlStatisticServiceApi* | [**postgresqlStatisticServiceGetMemory**](docs/Api/PostgresqlStatisticServiceApi.md#postgresqlstatisticservicegetmemory) | **GET** /v1/cloud/postgresql/{service_id}/statistic/memory | 
+*PostgresqlStatisticServiceApi* | [**postgresqlStatisticServiceGetNetwork**](docs/Api/PostgresqlStatisticServiceApi.md#postgresqlstatisticservicegetnetwork) | **GET** /v1/cloud/postgresql/{service_id}/statistic/network | 
 
 ## Models
 
@@ -120,7 +139,7 @@ Class | Method | HTTP request | Description
 - [MysqlChangeAccessPasswordRequest](docs/Model/MysqlChangeAccessPasswordRequest.md)
 - [MysqlChangeAccessPasswordResponse](docs/Model/MysqlChangeAccessPasswordResponse.md)
 - [MysqlChangeAccessPasswordResponseError](docs/Model/MysqlChangeAccessPasswordResponseError.md)
-- [MysqlConfig](docs/Model/MysqlConfig.md)
+- [MysqlConfigInfo](docs/Model/MysqlConfigInfo.md)
 - [MysqlCreateAccessRequest](docs/Model/MysqlCreateAccessRequest.md)
 - [MysqlCreateAccessResponse](docs/Model/MysqlCreateAccessResponse.md)
 - [MysqlCreateAccessResponseError](docs/Model/MysqlCreateAccessResponseError.md)
@@ -154,9 +173,55 @@ Class | Method | HTTP request | Description
 - [MysqlUpdateDbRequest](docs/Model/MysqlUpdateDbRequest.md)
 - [MysqlUpdateDbResponse](docs/Model/MysqlUpdateDbResponse.md)
 - [MysqlUpdateDbResponseError](docs/Model/MysqlUpdateDbResponseError.md)
+- [PostgresqlPgConfigInfo](docs/Model/PostgresqlPgConfigInfo.md)
+- [PostgresqlPgCreateDbRequest](docs/Model/PostgresqlPgCreateDbRequest.md)
+- [PostgresqlPgCreateDbResponse](docs/Model/PostgresqlPgCreateDbResponse.md)
+- [PostgresqlPgCreateDbResponseError](docs/Model/PostgresqlPgCreateDbResponseError.md)
+- [PostgresqlPgCreateError](docs/Model/PostgresqlPgCreateError.md)
+- [PostgresqlPgCreateParams](docs/Model/PostgresqlPgCreateParams.md)
+- [PostgresqlPgCreateRoleRequest](docs/Model/PostgresqlPgCreateRoleRequest.md)
+- [PostgresqlPgCreateRoleResponse](docs/Model/PostgresqlPgCreateRoleResponse.md)
+- [PostgresqlPgCreateRoleResponseError](docs/Model/PostgresqlPgCreateRoleResponseError.md)
+- [PostgresqlPgDb](docs/Model/PostgresqlPgDb.md)
+- [PostgresqlPgGetConfigResponse](docs/Model/PostgresqlPgGetConfigResponse.md)
+- [PostgresqlPgGetDbListResponse](docs/Model/PostgresqlPgGetDbListResponse.md)
+- [PostgresqlPgGetRemoteAccessResponse](docs/Model/PostgresqlPgGetRemoteAccessResponse.md)
+- [PostgresqlPgGetRoleListResponse](docs/Model/PostgresqlPgGetRoleListResponse.md)
+- [PostgresqlPgRemoteAccessState](docs/Model/PostgresqlPgRemoteAccessState.md)
+- [PostgresqlPgRemoveDbResponse](docs/Model/PostgresqlPgRemoveDbResponse.md)
+- [PostgresqlPgRemoveDbResponseError](docs/Model/PostgresqlPgRemoveDbResponseError.md)
+- [PostgresqlPgRemoveRoleResponse](docs/Model/PostgresqlPgRemoveRoleResponse.md)
+- [PostgresqlPgRemoveRoleResponseError](docs/Model/PostgresqlPgRemoveRoleResponseError.md)
+- [PostgresqlPgSetConfigRequest](docs/Model/PostgresqlPgSetConfigRequest.md)
+- [PostgresqlPgSetConfigResponse](docs/Model/PostgresqlPgSetConfigResponse.md)
+- [PostgresqlPgSetConfigResponseError](docs/Model/PostgresqlPgSetConfigResponseError.md)
+- [PostgresqlPgUpdateDbRequest](docs/Model/PostgresqlPgUpdateDbRequest.md)
+- [PostgresqlPgUpdateDbResponse](docs/Model/PostgresqlPgUpdateDbResponse.md)
+- [PostgresqlPgUpdateDbResponseError](docs/Model/PostgresqlPgUpdateDbResponseError.md)
+- [PostgresqlPgUpdateRemoteAccessRequest](docs/Model/PostgresqlPgUpdateRemoteAccessRequest.md)
+- [PostgresqlPgUpdateRemoteAccessResponse](docs/Model/PostgresqlPgUpdateRemoteAccessResponse.md)
+- [PostgresqlPgUpdateRemoteAccessResponseError](docs/Model/PostgresqlPgUpdateRemoteAccessResponseError.md)
+- [PostgresqlPgUpdateRoleRequest](docs/Model/PostgresqlPgUpdateRoleRequest.md)
+- [PostgresqlPgUpdateRoleResponse](docs/Model/PostgresqlPgUpdateRoleResponse.md)
+- [PostgresqlPgUpdateRoleResponseError](docs/Model/PostgresqlPgUpdateRoleResponseError.md)
+- [PostgresqlPostgresql14](docs/Model/PostgresqlPostgresql14.md)
+- [PostgresqlPostgresql14Configuration](docs/Model/PostgresqlPostgresql14Configuration.md)
+- [PostgresqlPostgresql15](docs/Model/PostgresqlPostgresql15.md)
+- [PostgresqlPostgresql15Configuration](docs/Model/PostgresqlPostgresql15Configuration.md)
+- [PostgresqlRole](docs/Model/PostgresqlRole.md)
+- [PostgresqlStatisticGetCpuDetailsResponse](docs/Model/PostgresqlStatisticGetCpuDetailsResponse.md)
+- [PostgresqlStatisticGetCpuResponse](docs/Model/PostgresqlStatisticGetCpuResponse.md)
+- [PostgresqlStatisticGetDiskResponse](docs/Model/PostgresqlStatisticGetDiskResponse.md)
+- [PostgresqlStatisticGetDiskUsageResponse](docs/Model/PostgresqlStatisticGetDiskUsageResponse.md)
+- [PostgresqlStatisticGetLoadAverageResponse](docs/Model/PostgresqlStatisticGetLoadAverageResponse.md)
+- [PostgresqlStatisticGetMemoryResponse](docs/Model/PostgresqlStatisticGetMemoryResponse.md)
+- [PostgresqlStatisticGetNetworkResponse](docs/Model/PostgresqlStatisticGetNetworkResponse.md)
 - [StructuresAddressInfo](docs/Model/StructuresAddressInfo.md)
 - [StructuresAddressInfoPrivateAddress](docs/Model/StructuresAddressInfoPrivateAddress.md)
 - [StructuresAddressInfoPublicAddress](docs/Model/StructuresAddressInfoPublicAddress.md)
+- [StructuresParamConfig](docs/Model/StructuresParamConfig.md)
+- [StructuresParamConfigEnumValue](docs/Model/StructuresParamConfigEnumValue.md)
+- [StructuresParamConfigSetValue](docs/Model/StructuresParamConfigSetValue.md)
 - [StructuresStatisticSeriesData](docs/Model/StructuresStatisticSeriesData.md)
 
 ## Authorization
@@ -182,6 +247,6 @@ vendor/bin/phpunit
 
 This PHP package is automatically generated by the [OpenAPI Generator](https://openapi-generator.tech) project:
 
-- API version: `v1.2.0`
-    - Package version: `v1.2.0`
+- API version: `v1.3.1`
+    - Package version: `v1.3.1`
 - Build package: `org.openapitools.codegen.languages.PhpClientCodegen`

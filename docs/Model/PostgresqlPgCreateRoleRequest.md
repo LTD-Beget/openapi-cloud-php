@@ -1,10 +1,12 @@
-# # MysqlConfig
+# # PostgresqlPgCreateRoleRequest
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**param** | **array<string,string>** |  | [optional]
-**preset_name** | **string** |  | [optional]
+**service_id** | **string** |  | [optional]
+**role_name** | **string** |  | [optional]
+**password** | **string** |  | [optional]
+**parent_role** | **string[]** |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

@@ -14,6 +14,8 @@ Name | Type | Description | Notes
 **price_month** | **float** |  | [optional]
 **mysql5** | [**\OpenAPI\Client\Model\MysqlMysql5**](MysqlMysql5.md) |  | [optional]
 **mysql8** | [**\OpenAPI\Client\Model\MysqlMysql8**](MysqlMysql8.md) |  | [optional]
+**postgresql15** | [**\OpenAPI\Client\Model\PostgresqlPostgresql15**](PostgresqlPostgresql15.md) |  | [optional]
+**postgresql14** | [**\OpenAPI\Client\Model\PostgresqlPostgresql14**](PostgresqlPostgresql14.md) |  | [optional]
 **manage_enabled** | **bool** |  | [optional]
 **slug** | **string** |  | [optional]
 **monitorable_resources** | **string[]** |  | [optional]
