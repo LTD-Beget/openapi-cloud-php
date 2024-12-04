@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **description** | **string** |  | [optional]
 **mysql_params** | [**\OpenAPI\Client\Model\MysqlCreateParams**](MysqlCreateParams.md) |  | [optional]
 **postgresql_params** | [**\OpenAPI\Client\Model\PostgresqlPgCreateParams**](PostgresqlPgCreateParams.md) |  | [optional]
+**s3_params** | [**\OpenAPI\Client\Model\S3S3CreateParams**](S3S3CreateParams.md) |  | [optional]
 **extra** | **string** |  | [optional]
 **region** | **string** |  | [optional]
 

@@ -84,6 +84,9 @@ Class | Method | HTTP request | Description
 *CloudServiceApi* | [**cloudServiceGetList**](docs/Api/CloudServiceApi.md#cloudservicegetlist) | **GET** /v1/cloud | 
 *CloudServiceApi* | [**cloudServiceRemove**](docs/Api/CloudServiceApi.md#cloudserviceremove) | **DELETE** /v1/cloud/{service_id} | 
 *CloudServiceApi* | [**cloudServiceUpdate**](docs/Api/CloudServiceApi.md#cloudserviceupdate) | **PATCH** /v1/cloud/{service_id} | 
+*MysqlBackupServiceApi* | [**mysqlBackupServiceGetList**](docs/Api/MysqlBackupServiceApi.md#mysqlbackupservicegetlist) | **GET** /v1/cloud/mysql/backup | 
+*MysqlBackupServiceApi* | [**mysqlBackupServiceGetOrders**](docs/Api/MysqlBackupServiceApi.md#mysqlbackupservicegetorders) | **GET** /v1/cloud/mysql/backup/orders | 
+*MysqlBackupServiceApi* | [**mysqlBackupServiceRestore**](docs/Api/MysqlBackupServiceApi.md#mysqlbackupservicerestore) | **POST** /v1/cloud/mysql/backup/{copy_id} | 
 *MysqlServiceApi* | [**mysqlServiceChangeAccessPassword**](docs/Api/MysqlServiceApi.md#mysqlservicechangeaccesspassword) | **PATCH** /v1/cloud/mysql/{service_id}/db/{db_name}/access/{host} | 
 *MysqlServiceApi* | [**mysqlServiceCreateAccess**](docs/Api/MysqlServiceApi.md#mysqlservicecreateaccess) | **POST** /v1/cloud/mysql/{service_id}/db/{db_name}/access | 
 *MysqlServiceApi* | [**mysqlServiceCreateDb**](docs/Api/MysqlServiceApi.md#mysqlservicecreatedb) | **POST** /v1/cloud/mysql/{service_id}/db | 
@@ -100,6 +103,9 @@ Class | Method | HTTP request | Description
 *MysqlStatisticServiceApi* | [**mysqlStatisticServiceGetLoadAverage**](docs/Api/MysqlStatisticServiceApi.md#mysqlstatisticservicegetloadaverage) | **GET** /v1/cloud/mysql/{service_id}/statistic/load-average | 
 *MysqlStatisticServiceApi* | [**mysqlStatisticServiceGetMemory**](docs/Api/MysqlStatisticServiceApi.md#mysqlstatisticservicegetmemory) | **GET** /v1/cloud/mysql/{service_id}/statistic/memory | 
 *MysqlStatisticServiceApi* | [**mysqlStatisticServiceGetNetwork**](docs/Api/MysqlStatisticServiceApi.md#mysqlstatisticservicegetnetwork) | **GET** /v1/cloud/mysql/{service_id}/statistic/network | 
+*PostgresqlBackupServiceApi* | [**postgresqlBackupServiceGetList**](docs/Api/PostgresqlBackupServiceApi.md#postgresqlbackupservicegetlist) | **GET** /v1/cloud/postgresql/backup | 
+*PostgresqlBackupServiceApi* | [**postgresqlBackupServiceGetOrders**](docs/Api/PostgresqlBackupServiceApi.md#postgresqlbackupservicegetorders) | **GET** /v1/cloud/postgresql/backup/orders | 
+*PostgresqlBackupServiceApi* | [**postgresqlBackupServiceRestore**](docs/Api/PostgresqlBackupServiceApi.md#postgresqlbackupservicerestore) | **POST** /v1/cloud/postgresql/backup/{copy_id} | 
 *PostgresqlServiceApi* | [**postgresqlServiceCreateDb**](docs/Api/PostgresqlServiceApi.md#postgresqlservicecreatedb) | **POST** /v1/cloud/postgresql/{service_id}/db | 
 *PostgresqlServiceApi* | [**postgresqlServiceCreateRole**](docs/Api/PostgresqlServiceApi.md#postgresqlservicecreaterole) | **POST** /v1/cloud/postgresql/{service_id}/role | 
 *PostgresqlServiceApi* | [**postgresqlServiceGetConfig**](docs/Api/PostgresqlServiceApi.md#postgresqlservicegetconfig) | **GET** /v1/cloud/postgresql/{service_id}/config | 
@@ -119,6 +125,13 @@ Class | Method | HTTP request | Description
 *PostgresqlStatisticServiceApi* | [**postgresqlStatisticServiceGetLoadAverage**](docs/Api/PostgresqlStatisticServiceApi.md#postgresqlstatisticservicegetloadaverage) | **GET** /v1/cloud/postgresql/{service_id}/statistic/load-average | 
 *PostgresqlStatisticServiceApi* | [**postgresqlStatisticServiceGetMemory**](docs/Api/PostgresqlStatisticServiceApi.md#postgresqlstatisticservicegetmemory) | **GET** /v1/cloud/postgresql/{service_id}/statistic/memory | 
 *PostgresqlStatisticServiceApi* | [**postgresqlStatisticServiceGetNetwork**](docs/Api/PostgresqlStatisticServiceApi.md#postgresqlstatisticservicegetnetwork) | **GET** /v1/cloud/postgresql/{service_id}/statistic/network | 
+*S3ServiceApi* | [**s3ServiceChangeAccessKey**](docs/Api/S3ServiceApi.md#s3servicechangeaccesskey) | **PATCH** /v1/cloud/s3/{service_id}/access-key | 
+*S3ServiceApi* | [**s3ServiceChangeCors**](docs/Api/S3ServiceApi.md#s3servicechangecors) | **PATCH** /v1/cloud/s3/{service_id}/cors | 
+*S3ServiceApi* | [**s3ServiceChangeDomain**](docs/Api/S3ServiceApi.md#s3servicechangedomain) | **PATCH** /v1/cloud/s3/{service_id}/domain | 
+*S3ServiceApi* | [**s3ServiceChangePublic**](docs/Api/S3ServiceApi.md#s3servicechangepublic) | **PATCH** /v1/cloud/s3/{service_id}/public | 
+*S3ServiceApi* | [**s3ServiceGetPrefix**](docs/Api/S3ServiceApi.md#s3servicegetprefix) | **GET** /v1/cloud/s3/prefix | 
+*S3ServiceApi* | [**s3ServiceGetPrice**](docs/Api/S3ServiceApi.md#s3servicegetprice) | **GET** /v1/cloud/s3/price | 
+*S3ServiceApi* | [**s3ServiceGetQuota**](docs/Api/S3ServiceApi.md#s3servicegetquota) | **GET** /v1/cloud/s3/quota | 
 
 ## Models
 
@@ -136,6 +149,11 @@ Class | Method | HTTP request | Description
 - [CloudUpdateRequest](docs/Model/CloudUpdateRequest.md)
 - [CloudUpdateResponse](docs/Model/CloudUpdateResponse.md)
 - [CloudUpdateResponseError](docs/Model/CloudUpdateResponseError.md)
+- [MysqlBackupGetListResponse](docs/Model/MysqlBackupGetListResponse.md)
+- [MysqlBackupGetOrdersResponse](docs/Model/MysqlBackupGetOrdersResponse.md)
+- [MysqlBackupRestoreRequest](docs/Model/MysqlBackupRestoreRequest.md)
+- [MysqlBackupRestoreResponse](docs/Model/MysqlBackupRestoreResponse.md)
+- [MysqlBackupRestoreResponseError](docs/Model/MysqlBackupRestoreResponseError.md)
 - [MysqlChangeAccessPasswordRequest](docs/Model/MysqlChangeAccessPasswordRequest.md)
 - [MysqlChangeAccessPasswordResponse](docs/Model/MysqlChangeAccessPasswordResponse.md)
 - [MysqlChangeAccessPasswordResponseError](docs/Model/MysqlChangeAccessPasswordResponseError.md)
@@ -155,6 +173,8 @@ Class | Method | HTTP request | Description
 - [MysqlMysql5](docs/Model/MysqlMysql5.md)
 - [MysqlMysql5Configuration](docs/Model/MysqlMysql5Configuration.md)
 - [MysqlMysql8](docs/Model/MysqlMysql8.md)
+- [MysqlMysql84](docs/Model/MysqlMysql84.md)
+- [MysqlMysql84Configuration](docs/Model/MysqlMysql84Configuration.md)
 - [MysqlMysql8Configuration](docs/Model/MysqlMysql8Configuration.md)
 - [MysqlRemoveAccessResponse](docs/Model/MysqlRemoveAccessResponse.md)
 - [MysqlRemoveAccessResponseError](docs/Model/MysqlRemoveAccessResponseError.md)
@@ -173,6 +193,11 @@ Class | Method | HTTP request | Description
 - [MysqlUpdateDbRequest](docs/Model/MysqlUpdateDbRequest.md)
 - [MysqlUpdateDbResponse](docs/Model/MysqlUpdateDbResponse.md)
 - [MysqlUpdateDbResponseError](docs/Model/MysqlUpdateDbResponseError.md)
+- [PostgresqlBackupGetListResponse](docs/Model/PostgresqlBackupGetListResponse.md)
+- [PostgresqlBackupGetOrdersResponse](docs/Model/PostgresqlBackupGetOrdersResponse.md)
+- [PostgresqlBackupRestoreRequest](docs/Model/PostgresqlBackupRestoreRequest.md)
+- [PostgresqlBackupRestoreResponse](docs/Model/PostgresqlBackupRestoreResponse.md)
+- [PostgresqlBackupRestoreResponseError](docs/Model/PostgresqlBackupRestoreResponseError.md)
 - [PostgresqlPgConfigInfo](docs/Model/PostgresqlPgConfigInfo.md)
 - [PostgresqlPgCreateDbRequest](docs/Model/PostgresqlPgCreateDbRequest.md)
 - [PostgresqlPgCreateDbResponse](docs/Model/PostgresqlPgCreateDbResponse.md)
@@ -208,6 +233,8 @@ Class | Method | HTTP request | Description
 - [PostgresqlPostgresql14Configuration](docs/Model/PostgresqlPostgresql14Configuration.md)
 - [PostgresqlPostgresql15](docs/Model/PostgresqlPostgresql15.md)
 - [PostgresqlPostgresql15Configuration](docs/Model/PostgresqlPostgresql15Configuration.md)
+- [PostgresqlPostgresql164](docs/Model/PostgresqlPostgresql164.md)
+- [PostgresqlPostgresql164Configuration](docs/Model/PostgresqlPostgresql164Configuration.md)
 - [PostgresqlRole](docs/Model/PostgresqlRole.md)
 - [PostgresqlStatisticGetCpuDetailsResponse](docs/Model/PostgresqlStatisticGetCpuDetailsResponse.md)
 - [PostgresqlStatisticGetCpuResponse](docs/Model/PostgresqlStatisticGetCpuResponse.md)
@@ -216,12 +243,36 @@ Class | Method | HTTP request | Description
 - [PostgresqlStatisticGetLoadAverageResponse](docs/Model/PostgresqlStatisticGetLoadAverageResponse.md)
 - [PostgresqlStatisticGetMemoryResponse](docs/Model/PostgresqlStatisticGetMemoryResponse.md)
 - [PostgresqlStatisticGetNetworkResponse](docs/Model/PostgresqlStatisticGetNetworkResponse.md)
+- [S3ChangeAccessKeyRequest](docs/Model/S3ChangeAccessKeyRequest.md)
+- [S3ChangeAccessKeyResponse](docs/Model/S3ChangeAccessKeyResponse.md)
+- [S3ChangeAccessKeyResponseError](docs/Model/S3ChangeAccessKeyResponseError.md)
+- [S3ChangeCorsRequest](docs/Model/S3ChangeCorsRequest.md)
+- [S3ChangeCorsResponse](docs/Model/S3ChangeCorsResponse.md)
+- [S3ChangeCorsResponseError](docs/Model/S3ChangeCorsResponseError.md)
+- [S3ChangeDomainRequest](docs/Model/S3ChangeDomainRequest.md)
+- [S3ChangeDomainResponse](docs/Model/S3ChangeDomainResponse.md)
+- [S3ChangeDomainResponseError](docs/Model/S3ChangeDomainResponseError.md)
+- [S3ChangePublicRequest](docs/Model/S3ChangePublicRequest.md)
+- [S3ChangePublicResponse](docs/Model/S3ChangePublicResponse.md)
+- [S3ChangePublicResponseError](docs/Model/S3ChangePublicResponseError.md)
+- [S3Cors](docs/Model/S3Cors.md)
+- [S3GetPrefixResponse](docs/Model/S3GetPrefixResponse.md)
+- [S3GetPriceResponse](docs/Model/S3GetPriceResponse.md)
+- [S3GetQuotaResponse](docs/Model/S3GetQuotaResponse.md)
+- [S3S3](docs/Model/S3S3.md)
+- [S3S3Configuration](docs/Model/S3S3Configuration.md)
+- [S3S3CreateError](docs/Model/S3S3CreateError.md)
+- [S3S3CreateParams](docs/Model/S3S3CreateParams.md)
 - [StructuresAddressInfo](docs/Model/StructuresAddressInfo.md)
 - [StructuresAddressInfoPrivateAddress](docs/Model/StructuresAddressInfoPrivateAddress.md)
 - [StructuresAddressInfoPublicAddress](docs/Model/StructuresAddressInfoPublicAddress.md)
+- [StructuresMysqlCopy](docs/Model/StructuresMysqlCopy.md)
+- [StructuresMysqlRestoreOrder](docs/Model/StructuresMysqlRestoreOrder.md)
 - [StructuresParamConfig](docs/Model/StructuresParamConfig.md)
 - [StructuresParamConfigEnumValue](docs/Model/StructuresParamConfigEnumValue.md)
 - [StructuresParamConfigSetValue](docs/Model/StructuresParamConfigSetValue.md)
+- [StructuresPostgresqlCopy](docs/Model/StructuresPostgresqlCopy.md)
+- [StructuresPostgresqlRestoreOrder](docs/Model/StructuresPostgresqlRestoreOrder.md)
 - [StructuresStatisticSeriesData](docs/Model/StructuresStatisticSeriesData.md)
 
 ## Authorization
@@ -247,6 +298,6 @@ vendor/bin/phpunit
 
 This PHP package is automatically generated by the [OpenAPI Generator](https://openapi-generator.tech) project:
 
-- API version: `v1.3.1`
-    - Package version: `v1.3.1`
+- API version: `v1.4.0`
+    - Package version: `v1.4.0`
 - Build package: `org.openapitools.codegen.languages.PhpClientCodegen`
