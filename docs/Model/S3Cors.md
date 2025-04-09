@@ -6,7 +6,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** |  | [optional]
 **http_method** | **string[]** |  | [optional]
-**http_header** | **string[]** |  | [optional]
+**access_control_allow_headers** | **string[]** |  | [optional]
+**access_control_expose_headers** | **string[]** |  | [optional]
 **cache_ttl** | **string** |  | [optional]
 **fqdn** | **string** |  | [optional]
 

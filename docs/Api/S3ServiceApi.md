@@ -8,6 +8,7 @@ All URIs are relative to https://api.beget.com, except if the operation defines 
 | [**s3ServiceChangeCors()**](S3ServiceApi.md#s3ServiceChangeCors) | **PATCH** /v1/cloud/s3/{service_id}/cors |  |
 | [**s3ServiceChangeDomain()**](S3ServiceApi.md#s3ServiceChangeDomain) | **PATCH** /v1/cloud/s3/{service_id}/domain |  |
 | [**s3ServiceChangePublic()**](S3ServiceApi.md#s3ServiceChangePublic) | **PATCH** /v1/cloud/s3/{service_id}/public |  |
+| [**s3ServiceEnableFtp()**](S3ServiceApi.md#s3ServiceEnableFtp) | **PATCH** /v1/cloud/s3/{service_id}/enable-ftp |  |
 | [**s3ServiceGetPrefix()**](S3ServiceApi.md#s3ServiceGetPrefix) | **GET** /v1/cloud/s3/prefix |  |
 | [**s3ServiceGetPrice()**](S3ServiceApi.md#s3ServiceGetPrice) | **GET** /v1/cloud/s3/price |  |
 | [**s3ServiceGetQuota()**](S3ServiceApi.md#s3ServiceGetQuota) | **GET** /v1/cloud/s3/quota |  |
@@ -239,6 +240,66 @@ try {
 ### Return type
 
 [**\OpenAPI\Client\Model\S3ChangePublicResponse**](../Model/S3ChangePublicResponse.md)
+
+### Authorization
+
+[bearerAuth](../../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `s3ServiceEnableFtp()`
+
+```php
+s3ServiceEnableFtp($service_id, $s3_enable_ftp_request): \OpenAPI\Client\Model\S3EnableFtpResponse
+```
+
+
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure Bearer (JWT) authorization: bearerAuth
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new OpenAPI\Client\Api\S3ServiceApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$service_id = 'service_id_example'; // string
+$s3_enable_ftp_request = new \OpenAPI\Client\Model\S3EnableFtpRequest(); // \OpenAPI\Client\Model\S3EnableFtpRequest
+
+try {
+    $result = $apiInstance->s3ServiceEnableFtp($service_id, $s3_enable_ftp_request);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling S3ServiceApi->s3ServiceEnableFtp: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **service_id** | **string**|  | |
+| **s3_enable_ftp_request** | [**\OpenAPI\Client\Model\S3EnableFtpRequest**](../Model/S3EnableFtpRequest.md)|  | |
+
+### Return type
+
+[**\OpenAPI\Client\Model\S3EnableFtpResponse**](../Model/S3EnableFtpResponse.md)
 
 ### Authorization
 
