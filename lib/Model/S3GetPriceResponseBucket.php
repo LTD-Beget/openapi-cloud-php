@@ -1,6 +1,6 @@
 <?php
 /**
- * S3EnableFtpResponseError
+ * S3GetPriceResponseBucket
  *
  * PHP version 7.4
  *
@@ -32,7 +32,7 @@ use \ArrayAccess;
 use \OpenAPI\Client\ObjectSerializer;
 
 /**
- * S3EnableFtpResponseError Class Doc Comment
+ * S3GetPriceResponseBucket Class Doc Comment
  *
  * @category Class
  * @package  OpenAPI\Client
@@ -40,7 +40,7 @@ use \OpenAPI\Client\ObjectSerializer;
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class S3EnableFtpResponseError implements ModelInterface, ArrayAccess, \JsonSerializable
+class S3GetPriceResponseBucket implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class S3EnableFtpResponseError implements ModelInterface, ArrayAccess, \JsonSeri
       *
       * @var string
       */
-    protected static $openAPIModelName = 'S3_EnableFtpResponse_Error';
+    protected static $openAPIModelName = 'S3_GetPriceResponse_Bucket';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,8 +57,12 @@ class S3EnableFtpResponseError implements ModelInterface, ArrayAccess, \JsonSeri
       * @var string[]
       */
     protected static $openAPITypes = [
-        'message' => 'string',
-        'code' => 'string'
+        'name' => 'string',
+        'display_name' => 'string',
+        'storage_size' => 'int',
+        'storage_rate' => 'float',
+        'traffic_amount' => 'int',
+        'traffic_rate' => 'float'
     ];
 
     /**
@@ -69,8 +73,12 @@ class S3EnableFtpResponseError implements ModelInterface, ArrayAccess, \JsonSeri
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'message' => null,
-        'code' => 'enum'
+        'name' => null,
+        'display_name' => null,
+        'storage_size' => 'uint32',
+        'storage_rate' => 'double',
+        'traffic_amount' => 'uint32',
+        'traffic_rate' => 'double'
     ];
 
     /**
@@ -79,8 +87,12 @@ class S3EnableFtpResponseError implements ModelInterface, ArrayAccess, \JsonSeri
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'message' => false,
-		'code' => false
+        'name' => false,
+		'display_name' => false,
+		'storage_size' => false,
+		'storage_rate' => false,
+		'traffic_amount' => false,
+		'traffic_rate' => false
     ];
 
     /**
@@ -169,8 +181,12 @@ class S3EnableFtpResponseError implements ModelInterface, ArrayAccess, \JsonSeri
      * @var string[]
      */
     protected static $attributeMap = [
-        'message' => 'message',
-        'code' => 'code'
+        'name' => 'name',
+        'display_name' => 'display_name',
+        'storage_size' => 'storage_size',
+        'storage_rate' => 'storage_rate',
+        'traffic_amount' => 'traffic_amount',
+        'traffic_rate' => 'traffic_rate'
     ];
 
     /**
@@ -179,8 +195,12 @@ class S3EnableFtpResponseError implements ModelInterface, ArrayAccess, \JsonSeri
      * @var string[]
      */
     protected static $setters = [
-        'message' => 'setMessage',
-        'code' => 'setCode'
+        'name' => 'setName',
+        'display_name' => 'setDisplayName',
+        'storage_size' => 'setStorageSize',
+        'storage_rate' => 'setStorageRate',
+        'traffic_amount' => 'setTrafficAmount',
+        'traffic_rate' => 'setTrafficRate'
     ];
 
     /**
@@ -189,8 +209,12 @@ class S3EnableFtpResponseError implements ModelInterface, ArrayAccess, \JsonSeri
      * @var string[]
      */
     protected static $getters = [
-        'message' => 'getMessage',
-        'code' => 'getCode'
+        'name' => 'getName',
+        'display_name' => 'getDisplayName',
+        'storage_size' => 'getStorageSize',
+        'storage_rate' => 'getStorageRate',
+        'traffic_amount' => 'getTrafficAmount',
+        'traffic_rate' => 'getTrafficRate'
     ];
 
     /**
@@ -234,21 +258,6 @@ class S3EnableFtpResponseError implements ModelInterface, ArrayAccess, \JsonSeri
         return self::$openAPIModelName;
     }
 
-    public const CODE_UNDERSCORE = '_';
-    public const CODE_SERVICE_DISABLED = 'SERVICE_DISABLED';
-
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getCodeAllowableValues()
-    {
-        return [
-            self::CODE_UNDERSCORE,
-            self::CODE_SERVICE_DISABLED,
-        ];
-    }
 
     /**
      * Associative array for storing property values
@@ -265,8 +274,12 @@ class S3EnableFtpResponseError implements ModelInterface, ArrayAccess, \JsonSeri
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('message', $data ?? [], null);
-        $this->setIfExists('code', $data ?? [], null);
+        $this->setIfExists('name', $data ?? [], null);
+        $this->setIfExists('display_name', $data ?? [], null);
+        $this->setIfExists('storage_size', $data ?? [], null);
+        $this->setIfExists('storage_rate', $data ?? [], null);
+        $this->setIfExists('traffic_amount', $data ?? [], null);
+        $this->setIfExists('traffic_rate', $data ?? [], null);
     }
 
     /**
@@ -296,15 +309,6 @@ class S3EnableFtpResponseError implements ModelInterface, ArrayAccess, \JsonSeri
     {
         $invalidProperties = [];
 
-        $allowedValues = $this->getCodeAllowableValues();
-        if (!is_null($this->container['code']) && !in_array($this->container['code'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'code', must be one of '%s'",
-                $this->container['code'],
-                implode("', '", $allowedValues)
-            );
-        }
-
         return $invalidProperties;
     }
 
@@ -321,69 +325,175 @@ class S3EnableFtpResponseError implements ModelInterface, ArrayAccess, \JsonSeri
 
 
     /**
-     * Gets message
+     * Gets name
      *
      * @return string|null
      */
-    public function getMessage()
+    public function getName()
     {
-        return $this->container['message'];
+        return $this->container['name'];
     }
 
     /**
-     * Sets message
+     * Sets name
      *
-     * @param string|null $message message
+     * @param string|null $name name
      *
      * @return self
      */
-    public function setMessage($message)
+    public function setName($name)
     {
 
-        if (is_null($message)) {
-            throw new \InvalidArgumentException('non-nullable message cannot be null');
+        if (is_null($name)) {
+            throw new \InvalidArgumentException('non-nullable name cannot be null');
         }
 
-        $this->container['message'] = $message;
+        $this->container['name'] = $name;
 
         return $this;
     }
 
     /**
-     * Gets code
+     * Gets display_name
      *
      * @return string|null
      */
-    public function getCode()
+    public function getDisplayName()
     {
-        return $this->container['code'];
+        return $this->container['display_name'];
     }
 
     /**
-     * Sets code
+     * Sets display_name
      *
-     * @param string|null $code code
+     * @param string|null $display_name display_name
      *
      * @return self
      */
-    public function setCode($code)
+    public function setDisplayName($display_name)
     {
-        $allowedValues = $this->getCodeAllowableValues();
-        if (!is_null($code) && !in_array($code, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value '%s' for 'code', must be one of '%s'",
-                    $code,
-                    implode("', '", $allowedValues)
-                )
-            );
+
+        if (is_null($display_name)) {
+            throw new \InvalidArgumentException('non-nullable display_name cannot be null');
         }
 
-        if (is_null($code)) {
-            throw new \InvalidArgumentException('non-nullable code cannot be null');
+        $this->container['display_name'] = $display_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets storage_size
+     *
+     * @return int|null
+     */
+    public function getStorageSize()
+    {
+        return $this->container['storage_size'];
+    }
+
+    /**
+     * Sets storage_size
+     *
+     * @param int|null $storage_size storage_size
+     *
+     * @return self
+     */
+    public function setStorageSize($storage_size)
+    {
+
+        if (is_null($storage_size)) {
+            throw new \InvalidArgumentException('non-nullable storage_size cannot be null');
         }
 
-        $this->container['code'] = $code;
+        $this->container['storage_size'] = $storage_size;
+
+        return $this;
+    }
+
+    /**
+     * Gets storage_rate
+     *
+     * @return float|null
+     */
+    public function getStorageRate()
+    {
+        return $this->container['storage_rate'];
+    }
+
+    /**
+     * Sets storage_rate
+     *
+     * @param float|null $storage_rate storage_rate
+     *
+     * @return self
+     */
+    public function setStorageRate($storage_rate)
+    {
+
+        if (is_null($storage_rate)) {
+            throw new \InvalidArgumentException('non-nullable storage_rate cannot be null');
+        }
+
+        $this->container['storage_rate'] = $storage_rate;
+
+        return $this;
+    }
+
+    /**
+     * Gets traffic_amount
+     *
+     * @return int|null
+     */
+    public function getTrafficAmount()
+    {
+        return $this->container['traffic_amount'];
+    }
+
+    /**
+     * Sets traffic_amount
+     *
+     * @param int|null $traffic_amount traffic_amount
+     *
+     * @return self
+     */
+    public function setTrafficAmount($traffic_amount)
+    {
+
+        if (is_null($traffic_amount)) {
+            throw new \InvalidArgumentException('non-nullable traffic_amount cannot be null');
+        }
+
+        $this->container['traffic_amount'] = $traffic_amount;
+
+        return $this;
+    }
+
+    /**
+     * Gets traffic_rate
+     *
+     * @return float|null
+     */
+    public function getTrafficRate()
+    {
+        return $this->container['traffic_rate'];
+    }
+
+    /**
+     * Sets traffic_rate
+     *
+     * @param float|null $traffic_rate traffic_rate
+     *
+     * @return self
+     */
+    public function setTrafficRate($traffic_rate)
+    {
+
+        if (is_null($traffic_rate)) {
+            throw new \InvalidArgumentException('non-nullable traffic_rate cannot be null');
+        }
+
+        $this->container['traffic_rate'] = $traffic_rate;
 
         return $this;
     }

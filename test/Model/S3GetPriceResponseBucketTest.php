@@ -1,6 +1,6 @@
 <?php
 /**
- * MysqlDbAccessTest
+ * S3GetPriceResponseBucketTest
  *
  * PHP version 7.4
  *
@@ -31,15 +31,15 @@ namespace OpenAPI\Client\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * MysqlDbAccessTest Class Doc Comment
+ * S3GetPriceResponseBucketTest Class Doc Comment
  *
  * @category    Class
- * @description MysqlDbAccess
+ * @description S3GetPriceResponseBucket
  * @package     OpenAPI\Client
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class MysqlDbAccessTest extends TestCase
+class S3GetPriceResponseBucketTest extends TestCase
 {
 
     /**
@@ -71,27 +71,63 @@ class MysqlDbAccessTest extends TestCase
     }
 
     /**
-     * Test "MysqlDbAccess"
+     * Test "S3GetPriceResponseBucket"
      */
-    public function testMysqlDbAccess()
+    public function testS3GetPriceResponseBucket()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "host"
+     * Test attribute "name"
      */
-    public function testPropertyHost()
+    public function testPropertyName()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "password"
+     * Test attribute "display_name"
      */
-    public function testPropertyPassword()
+    public function testPropertyDisplayName()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "storage_size"
+     */
+    public function testPropertyStorageSize()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "storage_rate"
+     */
+    public function testPropertyStorageRate()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "traffic_amount"
+     */
+    public function testPropertyTrafficAmount()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "traffic_rate"
+     */
+    public function testPropertyTrafficRate()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
