@@ -53,20 +53,20 @@ require_once(__DIR__ . '/vendor/autoload.php');
 $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\CloudServiceApi(
+$apiInstance = new OpenAPI\Client\Api\CdnServiceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $service_id = 'service_id_example'; // string
-$cloud_change_configuration_request = new \OpenAPI\Client\Model\CloudChangeConfigurationRequest(); // \OpenAPI\Client\Model\CloudChangeConfigurationRequest
+$cdn_change_resource_domains_request = new \OpenAPI\Client\Model\CdnChangeResourceDomainsRequest(); // \OpenAPI\Client\Model\CdnChangeResourceDomainsRequest
 
 try {
-    $result = $apiInstance->cloudServiceChangeConfiguration($service_id, $cloud_change_configuration_request);
+    $result = $apiInstance->cdnServiceChangeResourceDomains($service_id, $cdn_change_resource_domains_request);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CloudServiceApi->cloudServiceChangeConfiguration: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling CdnServiceApi->cdnServiceChangeResourceDomains: ', $e->getMessage(), PHP_EOL;
 }
 
 ```
@@ -77,6 +77,16 @@ All URIs are relative to *https://api.beget.com*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*CdnServiceApi* | [**cdnServiceChangeResourceDomains**](docs/Api/CdnServiceApi.md#cdnservicechangeresourcedomains) | **POST** /v1/cloud/cdn/{service_id}/resource-domains | 
+*CdnServiceApi* | [**cdnServiceChangeSetting**](docs/Api/CdnServiceApi.md#cdnservicechangesetting) | **POST** /v1/cloud/cdn/{service_id}/setting | 
+*CdnServiceApi* | [**cdnServiceGetPrice**](docs/Api/CdnServiceApi.md#cdnservicegetprice) | **GET** /v1/cloud/cdn/price | 
+*CdnServiceApi* | [**cdnServiceGetSourceDomains**](docs/Api/CdnServiceApi.md#cdnservicegetsourcedomains) | **GET** /v1/cloud/cdn/source-domains | 
+*CdnServiceApi* | [**cdnServicePreloadCacheByPaths**](docs/Api/CdnServiceApi.md#cdnservicepreloadcachebypaths) | **POST** /v1/cloud/cdn/{service_id}/preload-cache-by-paths | 
+*CdnServiceApi* | [**cdnServicePurgeAllCache**](docs/Api/CdnServiceApi.md#cdnservicepurgeallcache) | **GET** /v1/cloud/cdn/{service_id}/purge-all-cache | 
+*CdnServiceApi* | [**cdnServicePurgeCacheByPaths**](docs/Api/CdnServiceApi.md#cdnservicepurgecachebypaths) | **POST** /v1/cloud/cdn/{service_id}/purge-cache-by-paths | 
+*CdnStatisticServiceApi* | [**cdnStatisticServiceGetNetwork**](docs/Api/CdnStatisticServiceApi.md#cdnstatisticservicegetnetwork) | **GET** /v1/cloud/cdn/{service_id}/statistic/network | 
+*CdnStatisticServiceApi* | [**cdnStatisticServiceGetRequest**](docs/Api/CdnStatisticServiceApi.md#cdnstatisticservicegetrequest) | **GET** /v1/cloud/cdn/{service_id}/statistic/count-request | 
+*CdnStatisticServiceApi* | [**cdnStatisticServiceGetTraffic**](docs/Api/CdnStatisticServiceApi.md#cdnstatisticservicegettraffic) | **GET** /v1/cloud/cdn/{service_id}/statistic/traffic-usage | 
 *CloudServiceApi* | [**cloudServiceChangeConfiguration**](docs/Api/CloudServiceApi.md#cloudservicechangeconfiguration) | **PATCH** /v1/cloud/{service_id}/configuration | 
 *CloudServiceApi* | [**cloudServiceCreate**](docs/Api/CloudServiceApi.md#cloudservicecreate) | **POST** /v1/cloud | 
 *CloudServiceApi* | [**cloudServiceGet**](docs/Api/CloudServiceApi.md#cloudserviceget) | **GET** /v1/cloud/{service_id} | 
@@ -140,6 +150,52 @@ Class | Method | HTTP request | Description
 
 ## Models
 
+- [CdnCdn](docs/Model/CdnCdn.md)
+- [CdnCdnCreateError](docs/Model/CdnCdnCreateError.md)
+- [CdnCdnCreateErrorDomainError](docs/Model/CdnCdnCreateErrorDomainError.md)
+- [CdnCdnCreateErrorError](docs/Model/CdnCdnCreateErrorError.md)
+- [CdnCdnCreateParams](docs/Model/CdnCdnCreateParams.md)
+- [CdnChangeResourceDomainsRequest](docs/Model/CdnChangeResourceDomainsRequest.md)
+- [CdnChangeResourceDomainsResponse](docs/Model/CdnChangeResourceDomainsResponse.md)
+- [CdnChangeResourceDomainsResponseError](docs/Model/CdnChangeResourceDomainsResponseError.md)
+- [CdnChangeResourceDomainsResponseErrors](docs/Model/CdnChangeResourceDomainsResponseErrors.md)
+- [CdnChangeResourceDomainsResponseResourceDomains](docs/Model/CdnChangeResourceDomainsResponseResourceDomains.md)
+- [CdnChangeSettingRequest](docs/Model/CdnChangeSettingRequest.md)
+- [CdnChangeSettingResponse](docs/Model/CdnChangeSettingResponse.md)
+- [CdnChangeSettingResponseError](docs/Model/CdnChangeSettingResponseError.md)
+- [CdnGetPriceResponse](docs/Model/CdnGetPriceResponse.md)
+- [CdnGetPriceResponseCdn](docs/Model/CdnGetPriceResponseCdn.md)
+- [CdnGetSourceDomainsResponse](docs/Model/CdnGetSourceDomainsResponse.md)
+- [CdnPreloadCacheByPathsRequest](docs/Model/CdnPreloadCacheByPathsRequest.md)
+- [CdnPreloadCacheByPathsResponse](docs/Model/CdnPreloadCacheByPathsResponse.md)
+- [CdnPreloadCacheByPathsResponseError](docs/Model/CdnPreloadCacheByPathsResponseError.md)
+- [CdnPurgeAllCacheResponse](docs/Model/CdnPurgeAllCacheResponse.md)
+- [CdnPurgeAllCacheResponseError](docs/Model/CdnPurgeAllCacheResponseError.md)
+- [CdnPurgeCacheByPathsRequest](docs/Model/CdnPurgeCacheByPathsRequest.md)
+- [CdnPurgeCacheByPathsResponse](docs/Model/CdnPurgeCacheByPathsResponse.md)
+- [CdnPurgeCacheByPathsResponseError](docs/Model/CdnPurgeCacheByPathsResponseError.md)
+- [CdnResourceDomain](docs/Model/CdnResourceDomain.md)
+- [CdnSettings](docs/Model/CdnSettings.md)
+- [CdnSettingsAllowedHttpMethods](docs/Model/CdnSettingsAllowedHttpMethods.md)
+- [CdnSettingsCachingTimeBrowser](docs/Model/CdnSettingsCachingTimeBrowser.md)
+- [CdnSettingsCors](docs/Model/CdnSettingsCors.md)
+- [CdnSettingsFollowOriginRedirect](docs/Model/CdnSettingsFollowOriginRedirect.md)
+- [CdnSettingsGeoAcl](docs/Model/CdnSettingsGeoAcl.md)
+- [CdnSettingsGeoAclStringArray](docs/Model/CdnSettingsGeoAclStringArray.md)
+- [CdnSettingsGzipCompression](docs/Model/CdnSettingsGzipCompression.md)
+- [CdnSettingsIpAddressAcl](docs/Model/CdnSettingsIpAddressAcl.md)
+- [CdnSettingsRefererAcl](docs/Model/CdnSettingsRefererAcl.md)
+- [CdnSettingsResponseHeadersHidingPolicy](docs/Model/CdnSettingsResponseHeadersHidingPolicy.md)
+- [CdnSettingsStale](docs/Model/CdnSettingsStale.md)
+- [CdnSettingsStaticRequestHeaders](docs/Model/CdnSettingsStaticRequestHeaders.md)
+- [CdnSettingsStaticResponseHeader](docs/Model/CdnSettingsStaticResponseHeader.md)
+- [CdnSettingsStaticResponseHeaderHeader](docs/Model/CdnSettingsStaticResponseHeaderHeader.md)
+- [CdnSettingsTokenizedUrlSecureKey](docs/Model/CdnSettingsTokenizedUrlSecureKey.md)
+- [CdnSettingsUserAgentAcl](docs/Model/CdnSettingsUserAgentAcl.md)
+- [CdnSourceDomain](docs/Model/CdnSourceDomain.md)
+- [CdnStatisticGetNetworkResponse](docs/Model/CdnStatisticGetNetworkResponse.md)
+- [CdnStatisticGetRequestResponse](docs/Model/CdnStatisticGetRequestResponse.md)
+- [CdnStatisticGetTrafficResponse](docs/Model/CdnStatisticGetTrafficResponse.md)
 - [CloudChangeConfigurationRequest](docs/Model/CloudChangeConfigurationRequest.md)
 - [CloudChangeConfigurationResponse](docs/Model/CloudChangeConfigurationResponse.md)
 - [CloudChangeConfigurationResponseError](docs/Model/CloudChangeConfigurationResponseError.md)
@@ -313,6 +369,6 @@ vendor/bin/phpunit
 
 This PHP package is automatically generated by the [OpenAPI Generator](https://openapi-generator.tech) project:
 
-- API version: `v1.4.2`
-    - Package version: `v1.4.2`
+- API version: `v1.5.0`
+    - Package version: `v1.5.0`
 - Build package: `org.openapitools.codegen.languages.PhpClientCodegen`

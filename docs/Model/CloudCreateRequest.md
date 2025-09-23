@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **mysql_params** | [**\OpenAPI\Client\Model\MysqlCreateParams**](MysqlCreateParams.md) |  | [optional]
 **postgresql_params** | [**\OpenAPI\Client\Model\PostgresqlPgCreateParams**](PostgresqlPgCreateParams.md) |  | [optional]
 **s3_params** | [**\OpenAPI\Client\Model\S3S3CreateParams**](S3S3CreateParams.md) |  | [optional]
+**cdn_params** | [**\OpenAPI\Client\Model\CdnCdnCreateParams**](CdnCdnCreateParams.md) |  | [optional]
 **extra** | **string** |  | [optional]
 **region** | **string** |  | [optional]
 
