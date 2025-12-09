@@ -13,5 +13,7 @@ Name | Type | Description | Notes
 **cdn_params** | [**\OpenAPI\Client\Model\CdnCdnCreateParams**](CdnCdnCreateParams.md) |  | [optional]
 **extra** | **string** |  | [optional]
 **region** | **string** |  | [optional]
+**project_id** | **string** |  | [optional]
+**ui_pinned** | **bool** |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

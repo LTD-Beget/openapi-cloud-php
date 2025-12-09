@@ -79,6 +79,8 @@ Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *CdnServiceApi* | [**cdnServiceChangeResourceDomains**](docs/Api/CdnServiceApi.md#cdnservicechangeresourcedomains) | **POST** /v1/cloud/cdn/{service_id}/resource-domains | 
 *CdnServiceApi* | [**cdnServiceChangeSetting**](docs/Api/CdnServiceApi.md#cdnservicechangesetting) | **POST** /v1/cloud/cdn/{service_id}/setting | 
+*CdnServiceApi* | [**cdnServiceGetIso3166Countries**](docs/Api/CdnServiceApi.md#cdnservicegetiso3166countries) | **GET** /v1/cloud/cdn/iso3166-countries | 
+*CdnServiceApi* | [**cdnServiceGetIso3166Regions**](docs/Api/CdnServiceApi.md#cdnservicegetiso3166regions) | **POST** /v1/cloud/cdn/iso3166-regions | 
 *CdnServiceApi* | [**cdnServiceGetPrice**](docs/Api/CdnServiceApi.md#cdnservicegetprice) | **GET** /v1/cloud/cdn/price | 
 *CdnServiceApi* | [**cdnServiceGetSourceDomains**](docs/Api/CdnServiceApi.md#cdnservicegetsourcedomains) | **GET** /v1/cloud/cdn/source-domains | 
 *CdnServiceApi* | [**cdnServicePreloadCacheByPaths**](docs/Api/CdnServiceApi.md#cdnservicepreloadcachebypaths) | **POST** /v1/cloud/cdn/{service_id}/preload-cache-by-paths | 
@@ -87,7 +89,9 @@ Class | Method | HTTP request | Description
 *CdnStatisticServiceApi* | [**cdnStatisticServiceGetNetwork**](docs/Api/CdnStatisticServiceApi.md#cdnstatisticservicegetnetwork) | **GET** /v1/cloud/cdn/{service_id}/statistic/network | 
 *CdnStatisticServiceApi* | [**cdnStatisticServiceGetRequest**](docs/Api/CdnStatisticServiceApi.md#cdnstatisticservicegetrequest) | **GET** /v1/cloud/cdn/{service_id}/statistic/count-request | 
 *CdnStatisticServiceApi* | [**cdnStatisticServiceGetTraffic**](docs/Api/CdnStatisticServiceApi.md#cdnstatisticservicegettraffic) | **GET** /v1/cloud/cdn/{service_id}/statistic/traffic-usage | 
+*CloudServiceApi* | [**cloudServiceBindProject**](docs/Api/CloudServiceApi.md#cloudservicebindproject) | **PUT** /v1/cloud/{service_id}/project | 
 *CloudServiceApi* | [**cloudServiceChangeConfiguration**](docs/Api/CloudServiceApi.md#cloudservicechangeconfiguration) | **PATCH** /v1/cloud/{service_id}/configuration | 
+*CloudServiceApi* | [**cloudServiceChangePinned**](docs/Api/CloudServiceApi.md#cloudservicechangepinned) | **PUT** /v1/cloud/{service_id}/pin | 
 *CloudServiceApi* | [**cloudServiceCreate**](docs/Api/CloudServiceApi.md#cloudservicecreate) | **POST** /v1/cloud | 
 *CloudServiceApi* | [**cloudServiceGet**](docs/Api/CloudServiceApi.md#cloudserviceget) | **GET** /v1/cloud/{service_id} | 
 *CloudServiceApi* | [**cloudServiceGetConfigurationList**](docs/Api/CloudServiceApi.md#cloudservicegetconfigurationlist) | **GET** /v1/cloud/configuration | 
@@ -135,6 +139,10 @@ Class | Method | HTTP request | Description
 *PostgresqlStatisticServiceApi* | [**postgresqlStatisticServiceGetLoadAverage**](docs/Api/PostgresqlStatisticServiceApi.md#postgresqlstatisticservicegetloadaverage) | **GET** /v1/cloud/postgresql/{service_id}/statistic/load-average | 
 *PostgresqlStatisticServiceApi* | [**postgresqlStatisticServiceGetMemory**](docs/Api/PostgresqlStatisticServiceApi.md#postgresqlstatisticservicegetmemory) | **GET** /v1/cloud/postgresql/{service_id}/statistic/memory | 
 *PostgresqlStatisticServiceApi* | [**postgresqlStatisticServiceGetNetwork**](docs/Api/PostgresqlStatisticServiceApi.md#postgresqlstatisticservicegetnetwork) | **GET** /v1/cloud/postgresql/{service_id}/statistic/network | 
+*ProjectServiceApi* | [**projectServiceCreate**](docs/Api/ProjectServiceApi.md#projectservicecreate) | **POST** /v1/cloud/projects | 
+*ProjectServiceApi* | [**projectServiceGetList**](docs/Api/ProjectServiceApi.md#projectservicegetlist) | **GET** /v1/cloud/projects/list | 
+*ProjectServiceApi* | [**projectServiceRemove**](docs/Api/ProjectServiceApi.md#projectserviceremove) | **DELETE** /v1/cloud/projects/{project_id} | 
+*ProjectServiceApi* | [**projectServiceUpdate**](docs/Api/ProjectServiceApi.md#projectserviceupdate) | **PUT** /v1/cloud/projects/{project_id} | 
 *S3ServiceApi* | [**s3ServiceChangeAccessKey**](docs/Api/S3ServiceApi.md#s3servicechangeaccesskey) | **PATCH** /v1/cloud/s3/{service_id}/access-key | 
 *S3ServiceApi* | [**s3ServiceChangeCors**](docs/Api/S3ServiceApi.md#s3servicechangecors) | **PATCH** /v1/cloud/s3/{service_id}/cors | 
 *S3ServiceApi* | [**s3ServiceChangeDomain**](docs/Api/S3ServiceApi.md#s3servicechangedomain) | **PATCH** /v1/cloud/s3/{service_id}/domain | 
@@ -153,18 +161,25 @@ Class | Method | HTTP request | Description
 - [CdnCdn](docs/Model/CdnCdn.md)
 - [CdnCdnCreateError](docs/Model/CdnCdnCreateError.md)
 - [CdnCdnCreateErrorDomainError](docs/Model/CdnCdnCreateErrorDomainError.md)
+- [CdnCdnCreateErrorDomainErrorDomainAlreadyUsedDetails](docs/Model/CdnCdnCreateErrorDomainErrorDomainAlreadyUsedDetails.md)
 - [CdnCdnCreateErrorError](docs/Model/CdnCdnCreateErrorError.md)
 - [CdnCdnCreateParams](docs/Model/CdnCdnCreateParams.md)
 - [CdnChangeResourceDomainsRequest](docs/Model/CdnChangeResourceDomainsRequest.md)
 - [CdnChangeResourceDomainsResponse](docs/Model/CdnChangeResourceDomainsResponse.md)
 - [CdnChangeResourceDomainsResponseError](docs/Model/CdnChangeResourceDomainsResponseError.md)
+- [CdnChangeResourceDomainsResponseErrorDomainAlreadyUsedDetails](docs/Model/CdnChangeResourceDomainsResponseErrorDomainAlreadyUsedDetails.md)
 - [CdnChangeResourceDomainsResponseErrors](docs/Model/CdnChangeResourceDomainsResponseErrors.md)
 - [CdnChangeResourceDomainsResponseResourceDomains](docs/Model/CdnChangeResourceDomainsResponseResourceDomains.md)
 - [CdnChangeSettingRequest](docs/Model/CdnChangeSettingRequest.md)
 - [CdnChangeSettingResponse](docs/Model/CdnChangeSettingResponse.md)
 - [CdnChangeSettingResponseError](docs/Model/CdnChangeSettingResponseError.md)
+- [CdnGetCountriesResponse](docs/Model/CdnGetCountriesResponse.md)
+- [CdnGetCountriesResponseCountry](docs/Model/CdnGetCountriesResponseCountry.md)
 - [CdnGetPriceResponse](docs/Model/CdnGetPriceResponse.md)
 - [CdnGetPriceResponseCdn](docs/Model/CdnGetPriceResponseCdn.md)
+- [CdnGetRegionsRequest](docs/Model/CdnGetRegionsRequest.md)
+- [CdnGetRegionsResponse](docs/Model/CdnGetRegionsResponse.md)
+- [CdnGetRegionsResponseRegion](docs/Model/CdnGetRegionsResponseRegion.md)
 - [CdnGetSourceDomainsResponse](docs/Model/CdnGetSourceDomainsResponse.md)
 - [CdnPreloadCacheByPathsRequest](docs/Model/CdnPreloadCacheByPathsRequest.md)
 - [CdnPreloadCacheByPathsResponse](docs/Model/CdnPreloadCacheByPathsResponse.md)
@@ -196,9 +211,15 @@ Class | Method | HTTP request | Description
 - [CdnStatisticGetNetworkResponse](docs/Model/CdnStatisticGetNetworkResponse.md)
 - [CdnStatisticGetRequestResponse](docs/Model/CdnStatisticGetRequestResponse.md)
 - [CdnStatisticGetTrafficResponse](docs/Model/CdnStatisticGetTrafficResponse.md)
+- [CloudBindProjectRequest](docs/Model/CloudBindProjectRequest.md)
+- [CloudBindProjectResponse](docs/Model/CloudBindProjectResponse.md)
+- [CloudBindProjectResponseError](docs/Model/CloudBindProjectResponseError.md)
 - [CloudChangeConfigurationRequest](docs/Model/CloudChangeConfigurationRequest.md)
 - [CloudChangeConfigurationResponse](docs/Model/CloudChangeConfigurationResponse.md)
 - [CloudChangeConfigurationResponseError](docs/Model/CloudChangeConfigurationResponseError.md)
+- [CloudChangePinnedRequest](docs/Model/CloudChangePinnedRequest.md)
+- [CloudChangePinnedResponse](docs/Model/CloudChangePinnedResponse.md)
+- [CloudChangePinnedResponseError](docs/Model/CloudChangePinnedResponseError.md)
 - [CloudCreateRequest](docs/Model/CloudCreateRequest.md)
 - [CloudCreateResponse](docs/Model/CloudCreateResponse.md)
 - [CloudGetConfigurationListResponse](docs/Model/CloudGetConfigurationListResponse.md)
@@ -304,6 +325,17 @@ Class | Method | HTTP request | Description
 - [PostgresqlStatisticGetLoadAverageResponse](docs/Model/PostgresqlStatisticGetLoadAverageResponse.md)
 - [PostgresqlStatisticGetMemoryResponse](docs/Model/PostgresqlStatisticGetMemoryResponse.md)
 - [PostgresqlStatisticGetNetworkResponse](docs/Model/PostgresqlStatisticGetNetworkResponse.md)
+- [ProjectCreateProjectRequest](docs/Model/ProjectCreateProjectRequest.md)
+- [ProjectCreateProjectResponse](docs/Model/ProjectCreateProjectResponse.md)
+- [ProjectCreateProjectResponseError](docs/Model/ProjectCreateProjectResponseError.md)
+- [ProjectGetProjectListResponse](docs/Model/ProjectGetProjectListResponse.md)
+- [ProjectGetProjectListResponseProjectPage](docs/Model/ProjectGetProjectListResponseProjectPage.md)
+- [ProjectProject](docs/Model/ProjectProject.md)
+- [ProjectRemoveProjectResponse](docs/Model/ProjectRemoveProjectResponse.md)
+- [ProjectRemoveProjectResponseError](docs/Model/ProjectRemoveProjectResponseError.md)
+- [ProjectUpdateProjectRequest](docs/Model/ProjectUpdateProjectRequest.md)
+- [ProjectUpdateProjectResponse](docs/Model/ProjectUpdateProjectResponse.md)
+- [ProjectUpdateProjectResponseError](docs/Model/ProjectUpdateProjectResponseError.md)
 - [S3ChangeAccessKeyRequest](docs/Model/S3ChangeAccessKeyRequest.md)
 - [S3ChangeAccessKeyResponse](docs/Model/S3ChangeAccessKeyResponse.md)
 - [S3ChangeAccessKeyResponseError](docs/Model/S3ChangeAccessKeyResponseError.md)
@@ -313,6 +345,7 @@ Class | Method | HTTP request | Description
 - [S3ChangeDomainRequest](docs/Model/S3ChangeDomainRequest.md)
 - [S3ChangeDomainResponse](docs/Model/S3ChangeDomainResponse.md)
 - [S3ChangeDomainResponseError](docs/Model/S3ChangeDomainResponseError.md)
+- [S3ChangeDomainResponseErrorDomainAlreadyUsedDetails](docs/Model/S3ChangeDomainResponseErrorDomainAlreadyUsedDetails.md)
 - [S3ChangePublicRequest](docs/Model/S3ChangePublicRequest.md)
 - [S3ChangePublicResponse](docs/Model/S3ChangePublicResponse.md)
 - [S3ChangePublicResponseError](docs/Model/S3ChangePublicResponseError.md)
@@ -369,6 +402,6 @@ vendor/bin/phpunit
 
 This PHP package is automatically generated by the [OpenAPI Generator](https://openapi-generator.tech) project:
 
-- API version: `v1.5.0`
-    - Package version: `v1.5.0`
+- API version: `v1.6.0`
+    - Package version: `v1.6.0`
 - Build package: `org.openapitools.codegen.languages.PhpClientCodegen`

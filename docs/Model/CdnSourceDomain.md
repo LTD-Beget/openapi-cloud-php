@@ -8,5 +8,7 @@ Name | Type | Description | Notes
 **source_service_id** | **string** |  | [optional]
 **source_service_type** | **string** |  | [optional]
 **domain** | **string** |  | [optional]
+**source_service_display_name** | **string** |  | [optional]
+**source_service_slug** | **string** |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

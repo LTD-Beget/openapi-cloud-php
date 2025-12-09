@@ -12,7 +12,7 @@ All URIs are relative to https://api.beget.com, except if the operation defines 
 ## `postgresqlBackupServiceGetList()`
 
 ```php
-postgresqlBackupServiceGetList(): \OpenAPI\Client\Model\PostgresqlBackupGetListResponse
+postgresqlBackupServiceGetList($filter): \OpenAPI\Client\Model\PostgresqlBackupGetListResponse
 ```
 
 
@@ -34,9 +34,10 @@ $apiInstance = new OpenAPI\Client\Api\PostgresqlBackupServiceApi(
     new GuzzleHttp\Client(),
     $config
 );
+$filter = 'filter_example'; // string
 
 try {
-    $result = $apiInstance->postgresqlBackupServiceGetList();
+    $result = $apiInstance->postgresqlBackupServiceGetList($filter);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PostgresqlBackupServiceApi->postgresqlBackupServiceGetList: ', $e->getMessage(), PHP_EOL;
@@ -45,7 +46,9 @@ try {
 
 ### Parameters
 
-This endpoint does not need any parameter.
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **filter** | **string**|  | [optional] |
 
 ### Return type
 
