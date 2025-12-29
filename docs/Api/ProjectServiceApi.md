@@ -4,11 +4,72 @@ All URIs are relative to https://api.beget.com, except if the operation defines 
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
+| [**projectServiceChangePinned()**](ProjectServiceApi.md#projectServiceChangePinned) | **PUT** /v1/cloud/projects/{project_id}/pin |  |
 | [**projectServiceCreate()**](ProjectServiceApi.md#projectServiceCreate) | **POST** /v1/cloud/projects |  |
 | [**projectServiceGetList()**](ProjectServiceApi.md#projectServiceGetList) | **GET** /v1/cloud/projects/list |  |
 | [**projectServiceRemove()**](ProjectServiceApi.md#projectServiceRemove) | **DELETE** /v1/cloud/projects/{project_id} |  |
 | [**projectServiceUpdate()**](ProjectServiceApi.md#projectServiceUpdate) | **PUT** /v1/cloud/projects/{project_id} |  |
 
+
+## `projectServiceChangePinned()`
+
+```php
+projectServiceChangePinned($project_id, $project_change_pinned_request): \OpenAPI\Client\Model\ProjectChangePinnedResponse
+```
+
+
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure Bearer (JWT) authorization: bearerAuth
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new OpenAPI\Client\Api\ProjectServiceApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$project_id = 'project_id_example'; // string
+$project_change_pinned_request = new \OpenAPI\Client\Model\ProjectChangePinnedRequest(); // \OpenAPI\Client\Model\ProjectChangePinnedRequest
+
+try {
+    $result = $apiInstance->projectServiceChangePinned($project_id, $project_change_pinned_request);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ProjectServiceApi->projectServiceChangePinned: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **project_id** | **string**|  | |
+| **project_change_pinned_request** | [**\OpenAPI\Client\Model\ProjectChangePinnedRequest**](../Model/ProjectChangePinnedRequest.md)|  | |
+
+### Return type
+
+[**\OpenAPI\Client\Model\ProjectChangePinnedResponse**](../Model/ProjectChangePinnedResponse.md)
+
+### Authorization
+
+[bearerAuth](../../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
 ## `projectServiceCreate()`
 
@@ -71,7 +132,7 @@ try {
 ## `projectServiceGetList()`
 
 ```php
-projectServiceGetList($offset, $limit, $filter): \OpenAPI\Client\Model\ProjectGetProjectListResponse
+projectServiceGetList($offset, $limit, $filter, $sort): \OpenAPI\Client\Model\ProjectGetProjectListResponse
 ```
 
 
@@ -96,9 +157,10 @@ $apiInstance = new OpenAPI\Client\Api\ProjectServiceApi(
 $offset = 56; // int
 $limit = 56; // int
 $filter = 'filter_example'; // string
+$sort = 'sort_example'; // string
 
 try {
-    $result = $apiInstance->projectServiceGetList($offset, $limit, $filter);
+    $result = $apiInstance->projectServiceGetList($offset, $limit, $filter, $sort);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ProjectServiceApi->projectServiceGetList: ', $e->getMessage(), PHP_EOL;
@@ -112,6 +174,7 @@ try {
 | **offset** | **int**|  | [optional] |
 | **limit** | **int**|  | [optional] |
 | **filter** | **string**|  | [optional] |
+| **sort** | **string**|  | [optional] |
 
 ### Return type
 
