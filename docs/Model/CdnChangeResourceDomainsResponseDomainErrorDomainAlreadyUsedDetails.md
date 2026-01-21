@@ -1,4 +1,4 @@
-# # CdnChangeResourceDomainsResponseErrorDomainAlreadyUsedDetails
+# # CdnChangeResourceDomainsResponseDomainErrorDomainAlreadyUsedDetails
 
 ## Properties
 
