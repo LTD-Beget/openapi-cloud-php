@@ -15,5 +15,7 @@ Name | Type | Description | Notes
 **region** | **string** |  | [optional]
 **project_id** | **string** |  | [optional]
 **ui_pinned** | **bool** |  | [optional]
+**ui_pinned_after_rank** | **string** |  | [optional]
+**ui_pinned_before_rank** | **string** |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)
