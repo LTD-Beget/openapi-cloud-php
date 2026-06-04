@@ -9,5 +9,6 @@ Name | Type | Description | Notes
 **postgresql_error** | [**\OpenAPI\Client\Model\PostgresqlPgCreateError**](PostgresqlPgCreateError.md) |  | [optional]
 **s3_error** | [**\OpenAPI\Client\Model\S3S3CreateError**](S3S3CreateError.md) |  | [optional]
 **cdn_error** | [**\OpenAPI\Client\Model\CdnCdnCreateError**](CdnCdnCreateError.md) |  | [optional]
+**network_drive_error** | [**\OpenAPI\Client\Model\NetworkDriveNetworkDriveCreateError**](NetworkDriveNetworkDriveCreateError.md) |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

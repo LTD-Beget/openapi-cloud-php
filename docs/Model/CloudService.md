@@ -24,6 +24,7 @@ Name | Type | Description | Notes
 **postgresql164** | [**\OpenAPI\Client\Model\PostgresqlPostgresql164**](PostgresqlPostgresql164.md) |  | [optional]
 **s3** | [**\OpenAPI\Client\Model\S3S3**](S3S3.md) |  | [optional]
 **cdn** | [**\OpenAPI\Client\Model\CdnCdn**](CdnCdn.md) |  | [optional]
+**network_drive** | [**\OpenAPI\Client\Model\NetworkDriveNetworkDrive**](NetworkDriveNetworkDrive.md) |  | [optional]
 **manage_enabled** | **bool** |  | [optional]
 **slug** | **string** |  | [optional]
 **monitorable_resources** | **string[]** |  | [optional]

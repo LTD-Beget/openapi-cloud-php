@@ -117,6 +117,13 @@ Class | Method | HTTP request | Description
 *MysqlStatisticServiceApi* | [**mysqlStatisticServiceGetLoadAverage**](docs/Api/MysqlStatisticServiceApi.md#mysqlstatisticservicegetloadaverage) | **GET** /v1/cloud/mysql/{service_id}/statistic/load-average | 
 *MysqlStatisticServiceApi* | [**mysqlStatisticServiceGetMemory**](docs/Api/MysqlStatisticServiceApi.md#mysqlstatisticservicegetmemory) | **GET** /v1/cloud/mysql/{service_id}/statistic/memory | 
 *MysqlStatisticServiceApi* | [**mysqlStatisticServiceGetNetwork**](docs/Api/MysqlStatisticServiceApi.md#mysqlstatisticservicegetnetwork) | **GET** /v1/cloud/mysql/{service_id}/statistic/network | 
+*NetworkDriveServiceApi* | [**networkDriveServiceGetLimits**](docs/Api/NetworkDriveServiceApi.md#networkdriveservicegetlimits) | **GET** /v1/cloud/network-drive/limits | 
+*NetworkDriveServiceApi* | [**networkDriveServiceGetMounts**](docs/Api/NetworkDriveServiceApi.md#networkdriveservicegetmounts) | **GET** /v1/cloud/network-drive/mounts | 
+*NetworkDriveServiceApi* | [**networkDriveServiceGetPrice**](docs/Api/NetworkDriveServiceApi.md#networkdriveservicegetprice) | **GET** /v1/cloud/network-drive/price | 
+*NetworkDriveServiceApi* | [**networkDriveServiceMount**](docs/Api/NetworkDriveServiceApi.md#networkdriveservicemount) | **POST** /v1/cloud/network-drive/{service_id}/mount | 
+*NetworkDriveServiceApi* | [**networkDriveServiceResize**](docs/Api/NetworkDriveServiceApi.md#networkdriveserviceresize) | **POST** /v1/cloud/network-drive/{service_id}/resize | 
+*NetworkDriveServiceApi* | [**networkDriveServiceSetMounts**](docs/Api/NetworkDriveServiceApi.md#networkdriveservicesetmounts) | **POST** /v1/cloud/network-drive/mounts | 
+*NetworkDriveServiceApi* | [**networkDriveServiceUnmount**](docs/Api/NetworkDriveServiceApi.md#networkdriveserviceunmount) | **POST** /v1/cloud/network-drive/{service_id}/unmount | 
 *PostgresqlBackupServiceApi* | [**postgresqlBackupServiceGetList**](docs/Api/PostgresqlBackupServiceApi.md#postgresqlbackupservicegetlist) | **GET** /v1/cloud/postgresql/backup | 
 *PostgresqlBackupServiceApi* | [**postgresqlBackupServiceGetOrders**](docs/Api/PostgresqlBackupServiceApi.md#postgresqlbackupservicegetorders) | **GET** /v1/cloud/postgresql/backup/orders | 
 *PostgresqlBackupServiceApi* | [**postgresqlBackupServiceRestore**](docs/Api/PostgresqlBackupServiceApi.md#postgresqlbackupservicerestore) | **POST** /v1/cloud/postgresql/backup/{copy_id} | 
@@ -273,6 +280,33 @@ Class | Method | HTTP request | Description
 - [MysqlUpdateDbRequest](docs/Model/MysqlUpdateDbRequest.md)
 - [MysqlUpdateDbResponse](docs/Model/MysqlUpdateDbResponse.md)
 - [MysqlUpdateDbResponseError](docs/Model/MysqlUpdateDbResponseError.md)
+- [NetworkDriveGetLimitsResponse](docs/Model/NetworkDriveGetLimitsResponse.md)
+- [NetworkDriveGetLimitsResponseLimits](docs/Model/NetworkDriveGetLimitsResponseLimits.md)
+- [NetworkDriveGetLimitsResponseLimitsTotalSize](docs/Model/NetworkDriveGetLimitsResponseLimitsTotalSize.md)
+- [NetworkDriveGetMountsResponse](docs/Model/NetworkDriveGetMountsResponse.md)
+- [NetworkDriveGetMountsResponseError](docs/Model/NetworkDriveGetMountsResponseError.md)
+- [NetworkDriveGetMountsResponseNetworkDriveList](docs/Model/NetworkDriveGetMountsResponseNetworkDriveList.md)
+- [NetworkDriveGetPriceResponse](docs/Model/NetworkDriveGetPriceResponse.md)
+- [NetworkDriveGetPriceResponseNetworkDrive](docs/Model/NetworkDriveGetPriceResponseNetworkDrive.md)
+- [NetworkDriveMountRequest](docs/Model/NetworkDriveMountRequest.md)
+- [NetworkDriveMountResponse](docs/Model/NetworkDriveMountResponse.md)
+- [NetworkDriveMountResponseError](docs/Model/NetworkDriveMountResponseError.md)
+- [NetworkDriveNetworkDrive](docs/Model/NetworkDriveNetworkDrive.md)
+- [NetworkDriveNetworkDriveConfiguration](docs/Model/NetworkDriveNetworkDriveConfiguration.md)
+- [NetworkDriveNetworkDriveCreateError](docs/Model/NetworkDriveNetworkDriveCreateError.md)
+- [NetworkDriveNetworkDriveCreateParams](docs/Model/NetworkDriveNetworkDriveCreateParams.md)
+- [NetworkDriveNetworkDriveMountedResource](docs/Model/NetworkDriveNetworkDriveMountedResource.md)
+- [NetworkDriveResizeRequest](docs/Model/NetworkDriveResizeRequest.md)
+- [NetworkDriveResizeResponse](docs/Model/NetworkDriveResizeResponse.md)
+- [NetworkDriveResizeResponseError](docs/Model/NetworkDriveResizeResponseError.md)
+- [NetworkDriveSetMountsRequest](docs/Model/NetworkDriveSetMountsRequest.md)
+- [NetworkDriveSetMountsResponse](docs/Model/NetworkDriveSetMountsResponse.md)
+- [NetworkDriveSetMountsResponseError](docs/Model/NetworkDriveSetMountsResponseError.md)
+- [NetworkDriveSetMountsResponseErrorList](docs/Model/NetworkDriveSetMountsResponseErrorList.md)
+- [NetworkDriveSetMountsResponseNetworkDriveList](docs/Model/NetworkDriveSetMountsResponseNetworkDriveList.md)
+- [NetworkDriveUnmountRequest](docs/Model/NetworkDriveUnmountRequest.md)
+- [NetworkDriveUnmountResponse](docs/Model/NetworkDriveUnmountResponse.md)
+- [NetworkDriveUnmountResponseError](docs/Model/NetworkDriveUnmountResponseError.md)
 - [PostgresqlBackupGetListResponse](docs/Model/PostgresqlBackupGetListResponse.md)
 - [PostgresqlBackupGetOrdersResponse](docs/Model/PostgresqlBackupGetOrdersResponse.md)
 - [PostgresqlBackupRestoreRequest](docs/Model/PostgresqlBackupRestoreRequest.md)
@@ -405,6 +439,6 @@ vendor/bin/phpunit
 
 This PHP package is automatically generated by the [OpenAPI Generator](https://openapi-generator.tech) project:
 
-- API version: `v1.6.7`
-    - Package version: `v1.6.7`
+- API version: `v1.6.8`
+    - Package version: `v1.6.8`
 - Build package: `org.openapitools.codegen.languages.PhpClientCodegen`

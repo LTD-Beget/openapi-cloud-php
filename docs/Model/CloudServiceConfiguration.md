@@ -16,5 +16,6 @@ Name | Type | Description | Notes
 **postgresql14** | [**\OpenAPI\Client\Model\PostgresqlPostgresql14Configuration**](PostgresqlPostgresql14Configuration.md) |  | [optional]
 **postgresql164** | [**\OpenAPI\Client\Model\PostgresqlPostgresql164Configuration**](PostgresqlPostgresql164Configuration.md) |  | [optional]
 **s3** | [**\OpenAPI\Client\Model\S3S3Configuration**](S3S3Configuration.md) |  | [optional]
+**network_drive** | [**\OpenAPI\Client\Model\NetworkDriveNetworkDriveConfiguration**](NetworkDriveNetworkDriveConfiguration.md) |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

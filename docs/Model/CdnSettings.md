@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **stale** | [**\OpenAPI\Client\Model\CdnSettingsStale**](CdnSettingsStale.md) |  | [optional]
 **redirect_http_to_https** | **bool** |  | [optional]
 **tokenized_url_secure_key** | [**\OpenAPI\Client\Model\CdnSettingsTokenizedUrlSecureKey**](CdnSettingsTokenizedUrlSecureKey.md) |  | [optional]
+**is_allowed_http_methods_locked** | **bool** |  | [optional]
 **allowed_http_methods** | [**\OpenAPI\Client\Model\CdnSettingsAllowedHttpMethods**](CdnSettingsAllowedHttpMethods.md) |  | [optional]
 **http3_enabled** | **bool** |  | [optional]
 **gzip_compression** | [**\OpenAPI\Client\Model\CdnSettingsGzipCompression**](CdnSettingsGzipCompression.md) |  | [optional]

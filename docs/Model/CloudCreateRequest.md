@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **postgresql_params** | [**\OpenAPI\Client\Model\PostgresqlPgCreateParams**](PostgresqlPgCreateParams.md) |  | [optional]
 **s3_params** | [**\OpenAPI\Client\Model\S3S3CreateParams**](S3S3CreateParams.md) |  | [optional]
 **cdn_params** | [**\OpenAPI\Client\Model\CdnCdnCreateParams**](CdnCdnCreateParams.md) |  | [optional]
+**network_drive_params** | [**\OpenAPI\Client\Model\NetworkDriveNetworkDriveCreateParams**](NetworkDriveNetworkDriveCreateParams.md) |  | [optional]
 **extra** | **string** |  | [optional]
 **region** | **string** |  | [optional]
 **project_id** | **string** |  | [optional]
